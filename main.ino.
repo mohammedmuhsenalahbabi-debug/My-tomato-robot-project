@@ -1,0 +1,15 @@
+void setup() {
+  // This tells the brain to start talking to our computer
+  Serial.begin(9600);
+}
+
+void loop() {
+  // 1. Read the moisture level from the sensor
+  int soilValue = analogRead(A0);
+  
+  // 2. Print the number so we can see it
+  Serial.println(soilValue);
+  
+  // 3. Wait a small moment before checking again
+  delay(500);
+}
